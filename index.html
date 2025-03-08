@@ -9,13 +9,14 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEXzZMgE1Y3R-ZROuKy_h3eBmSYXu8f_sig&s') no-repeat center center fixed;
+            background: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zN19jbG9zZS11cF9ncmV5X2xlYXZlc19hYnN0cmFjdF9zaGFwZV9jb2xsYWdlX18zZmQyZDE2OC0zYTZmLTRhMjEtODM4ZS0wNGI1NWE2M2Q2NTdfMS5qcGc.jpg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
             color: #333;
         }
         .container {
-            width: 60%;
+            width: 90%;
+            max-width: 600px;
             margin: 50px auto;
             background: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -23,43 +24,42 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             color: #2c3e50;
             margin-bottom: 10px;
         }
         p {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #555;
             margin-bottom: 20px;
         }
         img {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             margin-top: 20px;
             border: 5px solid #2c3e50;
             object-fit: cover;
         }
         .section {
-            margin-top: 40px;
-            text-align: left;
+            margin-top: 30px;
+            text-align: center;
         }
         h2 {
             color: #2c3e50;
-            font-size: 1.8em;
-            padding-bottom: 10px;
+            font-size: 1.5em;
+            padding-bottom: 8px;
             border-bottom: 3px solid #2c3e50;
             display: inline-block;
-            text-align: center;
-            width: 100%;
+            width: auto;
         }
         ul {
             list-style: none;
             padding: 0;
         }
         ul li {
-            font-size: 1.2em;
-            padding: 8px 0;
+            font-size: 1em;
+            padding: 6px 0;
         }
         .contact-info a {
             color: #2980b9;
@@ -68,6 +68,25 @@
         }
         .contact-info a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            img {
+                width: 180px;
+                height: 180px;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            ul li {
+                font-size: 0.95em;
+            }
         }
     </style>
 </head>
