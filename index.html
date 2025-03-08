@@ -6,67 +6,117 @@
     <title>Saadia's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
             text-align: center;
-        }
-        .container {
-            width: 60%;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
             color: #333;
         }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
         p {
+            font-size: 1.2em;
             color: #555;
+            margin-bottom: 15px;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 4px solid #007bff;
+        }
+        .section {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .section h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1.1em;
+            padding: 5px 0;
         }
         .btn {
             display: inline-block;
             margin: 10px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #007bff;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.1em;
+            transition: 0.3s;
         }
         .btn:hover {
             background: #0056b3;
-        }
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        .details {
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Saadia's Portfolio</h1>
-        <img src="https://img.pikbest.com/png-images/20240723/hijab-girl-dp-cute-for-instagram-cartoon_10675426.png!sw800" alt="Saadia's Picture">
-        <p>Final Year BSIT Student | Web Developer | AI Enthusiast</p>
-        <div class="details">
+        <h1>Saadia</h1>
+        <img src="https://www.shutterstock.com/image-vector/hijab-woman-wearing-without-face-260nw-1538044379.jpg" alt="Saadia's Picture">
+        <p>Final Year BSIT Student | AI Enthusiast</p>
+        
+        <div class="section">
             <h2>About Me</h2>
-            <p>Hello! I'm Saadia, a passionate IT student specializing in web development and AI. I love building efficient and creative solutions.</p>
-            <h2>Skills</h2>
-            <p>HTML, CSS, JavaScript, Python, Flask, Django, AI & Machine Learning</p>
-            <h2>Projects</h2>
-            <p>1. Subtitle Classification Using Video Content Rating and Profanity Word Detection</p>
-            <p>2. E-commerce Website (Frontend & Backend)</p>
-            <p>3. AI Chatbot for Customer Support</p>
-            <h2>Contact</h2>
-            <p>Email: saadia@example.com</p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/saadia</a></p>
+            <p>Passionate about technology and innovation, I specialize in AI, web development, and software engineering. My goal is to develop intelligent solutions that make a real impact.</p>
         </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python, Flask, Django</li>
+                <li>AI</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Problem-solving</li>
+                <li>Teamwork</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Subtitle Classification System</strong> – Developed an AI-based tool for video content rating and profanity detection.</li>
+                <li><strong>E-commerce Website</strong> – Built a full-stack application using Django and JavaScript.</li>
+                <li><strong>AI Chatbot</strong> – Created an intelligent chatbot for automated customer support.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:studypoint135@gmail.com">studypoint135@gmail.com</a></p>
+<!--             <p>LinkedIn: <a href="#">linkedin.com/in/saadia</a></p> -->
+        </div>
+        
+        <a href="#" class="btn">Download Resume</a>
     </div>
 </body>
 </html>
