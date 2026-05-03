@@ -34,7 +34,7 @@
             padding: 0 1.5rem;
         }
 
-        /* Navbar */
+        /* ========== NAVBAR - DESKTOP ========== */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -42,8 +42,6 @@
             padding: 1.2rem 0;
             border-bottom: 1px solid #e2e8f0;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
 
         .logo {
@@ -56,7 +54,6 @@
         .nav-links {
             display: flex;
             gap: 1.8rem;
-            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -86,6 +83,96 @@
         .btn-download:hover {
             background: #1a56db;
             color: white;
+        }
+
+        /* ========== MOBILE SIDEBAR NAVIGATION ========== */
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1a56db;
+            z-index: 1001;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 280px;
+            height: 100%;
+            background: white;
+            box-shadow: 2px 0 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar .close-btn {
+            align-self: flex-end;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        .sidebar .logo-side {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a56db;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .sidebar-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            transition: color 0.2s;
+        }
+
+        .sidebar-links a:hover {
+            color: #1a56db;
+        }
+
+        .sidebar .btn-download-side {
+            margin-top: 1rem;
+            background: transparent;
+            border: 1.5px solid #1a56db;
+            color: #1a56db;
+            padding: 0.6rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
         }
 
         /* Hero Section */
@@ -165,7 +252,6 @@
             font-weight: 500;
         }
 
-        /* Hero Right Card */
         .hero-card {
             background: #f8fafd;
             border-radius: 20px;
@@ -190,7 +276,6 @@
             margin-top: 0.8rem;
         }
 
-        /* Section Titles */
         .section-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -204,7 +289,6 @@
             margin-bottom: 4rem;
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -256,7 +340,6 @@
             color: #1a56db;
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -321,7 +404,6 @@
             font-weight: 600;
         }
 
-        /* Education Grid */
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -376,7 +458,6 @@
             color: #6c7a8a;
         }
 
-        /* Contact Grid - with clickable links */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -433,10 +514,34 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive */
+        /* ========== RESPONSIVE ========== */
         @media (max-width: 900px) {
             .container {
                 padding: 0 1rem;
+            }
+            
+            /* Hide desktop navbar items */
+            .navbar .nav-links {
+                display: none;
+            }
+            
+            .navbar .btn-download {
+                display: none;
+            }
+            
+            /* Show menu icon */
+            .menu-icon {
+                display: block;
+            }
+            
+            /* Hide logo on mobile */
+            .navbar .logo {
+                display: none;
+            }
+            
+            .navbar {
+                justify-content: flex-end;
+                padding: 1rem 0;
             }
             
             .hero {
@@ -445,7 +550,7 @@
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             
             .hero-tagline {
@@ -459,15 +564,6 @@
             .edu-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-links {
-                justify-content: center;
-            }
         }
 
         @media (min-width: 901px) and (max-width: 1100px) {
@@ -480,7 +576,24 @@
 <body>
 
 <div class="container">
-    <!-- Navbar -->
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="closeSidebar">&times;</div>
+        <div class="logo-side">Saadia Kamil</div>
+        <div class="sidebar-links">
+            <a href="#">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="downloadCvBtnSide" class="btn-download-side"><i class="fas fa-download"></i> Resume</button>
+    </div>
+
+    <!-- Desktop Navbar -->
     <nav class="navbar">
         <div class="logo">Saadia Kamil</div>
         <div class="nav-links">
@@ -491,6 +604,9 @@
             <a href="#contact">Contact</a>
         </div>
         <button id="downloadCvBtn" class="btn-download"><i class="fas fa-download"></i> Resume</button>
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -612,24 +728,19 @@
         </div>
     </div>
 
-    <!-- Contact Section - Email opens Gmail, Phone opens WhatsApp -->
+    <!-- Contact Section -->
     <div class="section" id="contact">
         <div class="section-title">Contact</div>
         <div class="contact-grid">
             <div>
-                <!-- Email - opens Gmail/Email app -->
                 <div class="contact-detail">
                     <i class="fas fa-envelope"></i>
                     <a href="mailto:saadiakamil3400@gmail.com" class="contact-link">saadiakamil3400@gmail.com</a>
                 </div>
-                
-                <!-- Phone - opens WhatsApp -->
                 <div class="contact-detail">
                     <i class="fab fa-whatsapp" style="color: #25D366;"></i>
                     <a href="https://wa.me/923153894002?text=Assalam-o-Alaikum%20Saadia,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" target="_blank" class="contact-link">+92-315-3894002 (WhatsApp)</a>
                 </div>
-                
-                <!-- Location -->
                 <div class="contact-detail">
                     <i class="fas fa-map-marker-alt"></i>
                     <span class="contact-link" style="cursor: default;">Karachi, Pakistan</span>
@@ -652,9 +763,37 @@
 </div>
 
 <script>
+    // Sidebar functionality
+    const menuIcon = document.getElementById('menuIcon');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    function openSidebar() {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebarFunc() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    menuIcon.addEventListener('click', openSidebar);
+    closeSidebar.addEventListener('click', closeSidebarFunc);
+    overlay.addEventListener('click', closeSidebarFunc);
+
+    // Close sidebar when clicking on a link
+    document.querySelectorAll('.sidebar-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeSidebarFunc();
+        });
+    });
+
     // CV Download
-    document.getElementById('downloadCvBtn').addEventListener('click', (e) => {
-        e.preventDefault();
+    function downloadCV() {
         const resume = `========================================
                     SAADIA KAMIL
         AI AUTOMATION & WEB DEVELOPER
@@ -687,14 +826,18 @@ Final Year Project: Video Profanity Detection System
         a.download = 'Saadia_Kamil_Resume.txt';
         a.click();
         URL.revokeObjectURL(a.href);
-    });
+    }
 
-    // Smooth scroll
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.getElementById('downloadCvBtn').addEventListener('click', downloadCV);
+    document.getElementById('downloadCvBtnSide').addEventListener('click', downloadCV);
+
+    // Smooth scroll for sidebar links
+    document.querySelectorAll('.sidebar-links a, .nav-links a').forEach(link => {
         const href = link.getAttribute('href');
         if (href && href !== '#') {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
+                closeSidebarFunc();
                 const target = document.querySelector(href);
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
