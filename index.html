@@ -2,138 +2,477 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- SEO -->
-    <title>Saadia Kamil | AI & Web Developer Portfolio</title>
-    <meta name="description" content="Saadia Kamil – BSIT Graduate from Benazir Bhutto Shaheed University Lyari, specializing in AI and Web Development.">
-    <meta name="keywords" content="Saadia Kamil Portfolio, AI Developer, Web Developer, Flask Projects, BSIT Graduate">
+    <!-- SEO Meta Tags -->
+    <title>Saadia Kamil | AI Automation & Web Developer</title>
+    <meta name="description" content="Saadia Kamil - AI Automation Specialist & Web Developer. BSIT Graduate December 2025.">
     <meta name="author" content="Saadia Kamil">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #f0f2f5 url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zN19jbG9zZS11cF9ncmV5X2xlYXZlc19hYnN0cmFjdF9zaGFwZV9jb2xsYWdlX18zZmQyZDE2OC0zYTZmLTRhMjEtODM4ZS0wNGI1NWE2M2Q2NTdfMS5qcGc.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-blend-mode: overlay;
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f7fa;
+            color: #1a1f2e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
         }
 
         .container {
-            width: 92%;
-            max-width: 900px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 18px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-            border: 1px solid rgba(0,0,0,0.05);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
-        h1 {
-            font-size: 2.6em;
-            color: #8B1E3F; /* Accent red */
-            text-align: center;
-            margin-bottom: 8px;
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
-        .subtitle {
-            text-align: center;
-            font-size: 1.1em;
-            color: #2c3e50; /* Dark blue text */
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a56db;
+            letter-spacing: -0.02em;
         }
 
-        .tagline {
-            text-align: center;
-            font-size: 1em;
-            color: #555;
-            margin: 15px 0 30px;
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
         }
 
-        section {
-            margin-top: 35px;
-        }
-
-        h2 {
-            color: #8B1E3F; /* Accent red for section titles */
-            border-bottom: 2px solid #f0c1c8;
-            display: inline-block;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
-            font-size: 1.4em;
-        }
-
-        p {
-            line-height: 1.7;
-            color: #555;
-            font-size: 0.95em;
-            background: rgba(255,255,255,0.8);
-            padding: 12px 15px;
-            border-radius: 12px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            padding: 6px 0;
-            font-size: 0.95em;
-            color: #2c3e50;
-        }
-
-        .project {
-            background: #ffe6ea; /* Light pink background */
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border-left: 5px solid #8B1E3F;
-        }
-
-        .project strong {
-            color: #8B1E3F;
-        }
-
-        .cv-section {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .cv-section a {
-            display: inline-block;
-            padding: 12px 26px;
-            background: #8B1E3F; /* Accent button */
-            color: #fff;
+        .nav-links a {
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 1em;
-            transition: 0.3s;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 1rem;
         }
 
-        .cv-section a:hover {
-            background: #5f142b;
+        .nav-links a:hover {
+            color: #1a56db;
         }
 
-        footer {
+        .btn-download {
+            background: transparent;
+            border: 1.5px solid #1a56db;
+            color: #1a56db;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-download:hover {
+            background: #1a56db;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+            background: white;
+            border-radius: 28px;
+            padding: 2.5rem;
+            border: 1px solid #eef2f6;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            padding: 0.35rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1a56db;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #1a1f2e;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .grad-info {
+            background: #f0f4fa;
+            padding: 0.6rem 1rem;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1a56db;
+            margin: 1rem 0;
+        }
+
+        .hero-desc {
+            color: #4a5568;
+            line-height: 1.7;
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+
+        .stats-grid {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a56db;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #6c7a8a;
+            font-weight: 500;
+        }
+
+        /* Hero Right Card */
+        .hero-card {
+            background: #f8fafd;
+            border-radius: 20px;
+            padding: 1.8rem;
+            border: 1px solid #eef2f6;
             text-align: center;
-            margin-top: 35px;
-            font-size: 0.85em;
-            color: #777;
         }
 
-        /* MOBILE FRIENDLY */
-        @media(max-width:768px) {
-            h1 {
-                font-size: 2.1em;
-            }
+        .hero-card h3 {
+            font-size: 1.2rem;
+            margin: 0.8rem 0;
+        }
+
+        .live-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #1a56db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            color: #1a1f2e;
+            border-left: 5px solid #1a56db;
+            padding-left: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.8rem;
+            border: 1px solid #eef2f6;
+            transition: all 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            color: #1a56db;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .skill-card p {
+            color: #6c7a8a;
+            font-size: 0.9rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tags span {
+            background: #f0f4fa;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1a56db;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #eef2f6;
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .project-icon {
+            font-size: 1.8rem;
+            color: #1a56db;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-desc {
+            color: #6c7a8a;
+            font-size: 0.85rem;
+            margin: 0.7rem 0;
+            line-height: 1.5;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+
+        .tech-stack span {
+            background: #f0f4fa;
+            padding: 0.15rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: #1a56db;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #1a56db;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Education Grid */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+        }
+
+        .edu-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #eef2f6;
+        }
+
+        .edu-badge {
+            background: #e8f0fe;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #1a56db;
+            margin-bottom: 0.8rem;
+        }
+
+        .edu-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-meta {
+            font-size: 0.8rem;
+            color: #6c7a8a;
+            margin-bottom: 0.8rem;
+        }
+
+        .edu-project {
+            background: #f8fafd;
+            padding: 0.8rem;
+            border-radius: 14px;
+            margin-top: 0.8rem;
+        }
+
+        .edu-project strong {
+            font-size: 0.8rem;
+            color: #1a56db;
+        }
+
+        .edu-project p {
+            font-size: 0.75rem;
+            margin-top: 4px;
+            color: #6c7a8a;
+        }
+
+        /* Contact Grid - with clickable links */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid #eef2f6;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail i {
+            width: 28px;
+            color: #1a56db;
+            font-size: 1.1rem;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #4a5568;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: #1a56db;
+            text-decoration: underline;
+        }
+
+        .availability-list {
+            list-style: none;
+        }
+
+        .availability-list li {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #eef2f6;
+            margin-top: 3rem;
+            color: #8a99aa;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
             .container {
-                padding: 25px;
+                padding: 0 1rem;
             }
-            h2 {
-                font-size: 1.25em;
+            
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1rem;
+            }
+            
+            .skills-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .edu-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-links {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 901px) and (max-width: 1100px) {
+            .skills-grid, .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -141,83 +480,226 @@
 <body>
 
 <div class="container">
-
-    <!-- HERO -->
-    <h1>Saadia Kamil</h1>
-    <p class="subtitle">BSIT Graduate | AI & Web Developer</p>
-    <p class="tagline">Turning ideas into intelligent, practical digital solutions.</p>
-
-    <!-- ABOUT -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a motivated BSIT graduate from <strong>Benazir Bhutto Shaheed University Lyari</strong>
-            with a strong interest in Artificial Intelligence, Web Development, and Automation.
-        </p>
-        <p>
-            My Final Year Project provided hands-on experience in AI-based systems,
-            backend development, and video processing technologies.
-        </p>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Flask, Django</li>
-            <li>AI & NLP (Basics)</li>
-            <li>SQLite, GitHub</li>
-        </ul>
-
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Communication</li>
-            <li>Analytical Thinking</li>
-            <li>Continuous Learning</li>
-        </ul>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <strong>Video Profanity Detection & Subtitle Classification System</strong>
-            <p>
-                An AI-powered system that extracts audio from videos, detects offensive content,
-                classifies subtitles, and generates content ratings automatically.
-            </p>
-            <p><strong>Technologies:</strong> Python, Flask, NLP, SQLite</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Saadia Kamil</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
         </div>
-    </section>
+        <button id="downloadCvBtn" class="btn-download"><i class="fas fa-download"></i> Resume</button>
+    </nav>
 
-    <!-- EDUCATION -->
-    <section>
-        <h2>Education</h2>
-        <p>
-            <strong>Bachelor of Science in Information Technology (BSIT)</strong><br>
-            Benazir Bhutto Shaheed University Lyari
-        </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <strong>studypoint135@gmail.com</strong></p>
-        <p>Phone: <strong>+92-315-3894002</strong></p>
-    </section>
-
-    <!-- DOWNLOAD CV -->
-    <div class="cv-section">
-        <a href="#">Download CV</a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <div class="hero-badge">
+                <i class="fas fa-microchip"></i> AI Automation & Web Development
+            </div>
+            <h1>Saadia Kamil</h1>
+            <div class="hero-tagline">Building Intelligent Systems & Modern Web Experiences</div>
+            <div class="grad-info">
+                <i class="fas fa-graduation-cap"></i> BSIT Graduate — December 2025
+                <i class="fas fa-check-circle" style="color: #22c55e;"></i>
+            </div>
+            
+            <p class="hero-desc">
+                I am a BSIT graduate from Benazir Bhutto Shaheed University Lyari (December 2025) with a strong passion for Artificial Intelligence, Web Development, and Automation. My expertise includes Python, Flask, NLP, modern web technologies, and automation scripts. I am now seeking opportunities to contribute my skills to innovative teams.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat"><div class="stat-number">5+</div><div class="stat-label">Projects</div></div>
+                <div class="stat"><div class="stat-number">3+</div><div class="stat-label">Live Sites</div></div>
+                <div class="stat"><div class="stat-number">2025</div><div class="stat-label">Fresh Graduate</div></div>
+            </div>
+        </div>
+        <div class="hero-card">
+            <i class="fas fa-globe" style="font-size: 2rem; color: #1a56db;"></i>
+            <h3>Live Project</h3>
+            <p style="color: #6c7a8a;">North Gate Visa Services — Professional visa consultation website</p>
+            <a href="https://northgatevisaservices.com/" target="_blank" class="live-link">
+                <i class="fas fa-external-link-alt"></i> northgatevisaservices.com
+            </a>
+            <hr style="margin: 1rem 0; border-color: #e2e8f0;">
+            <div style="font-size: 0.8rem; color: #6c7a8a;">
+                <i class="fas fa-check-circle" style="color: #22c55e;"></i> Fully Responsive & SEO Optimized
+            </div>
+        </div>
     </div>
 
-    <footer>
-        © 2026 Saadia Kamil | Built with passion & purpose
-    </footer>
+    <!-- Skills Section -->
+    <div class="section" id="skills">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <h3>AI & Backend</h3>
+                <p>Python, Flask, NLP pipelines, automation scripts, SQLite databases</p>
+                <div class="skill-tags"><span>Python</span><span>Flask</span><span>NLP</span><span>SQLite</span></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Frontend Development</h3>
+                <p>Responsive websites, clean UI/UX, cross-browser compatibility</p>
+                <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Automation</h3>
+                <p>Workflow automation, web scraping, API integration, script development</p>
+                <div class="skill-tags"><span>Automation</span><span>APIs</span><span>Selenium</span><span>Scripting</span></div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Projects Section -->
+    <div class="section" id="projects">
+        <div class="section-title">Featured Projects</div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-passport"></i></div>
+                <div class="project-title">North Gate Visa Services</div>
+                <div class="project-desc">Complete visa consultation website with services showcase, contact forms, and modern responsive design.</div>
+                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                <a href="https://northgatevisaservices.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> View Live</a>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-video"></i></div>
+                <div class="project-title">Video Profanity Detection</div>
+                <div class="project-desc">AI-powered system that detects offensive content in videos and auto-generates content ratings.</div>
+                <div class="tech-stack"><span>Python</span><span>Flask</span><span>NLP</span></div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                <div class="project-title">AI Website Builder</div>
+                <div class="project-desc">Python automation tool that generates complete website templates automatically.</div>
+                <div class="tech-stack"><span>Python</span><span>Automation</span><span>APIs</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section" id="education">
+        <div class="section-title">Education & Academic Projects</div>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-badge">🎓 December 2025</div>
+                <div class="edu-title">BS Information Technology</div>
+                <div class="edu-meta">Benazir Bhutto Shaheed University Lyari</div>
+                <div class="edu-project">
+                    <strong><i class="fas fa-microphone-alt"></i> Final Year Project:</strong>
+                    <p>Video Profanity Detection & Subtitle Classification System — AI-based content moderation tool</p>
+                </div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-badge">📚 Academic Projects</div>
+                <div class="edu-project">
+                    <strong><i class="fas fa-chat"></i> AI Chatbot Prototype</strong>
+                    <p>Basic NLP chatbot using Python and NLTK library</p>
+                </div>
+                <div class="edu-project">
+                    <strong><i class="fas fa-shopping-cart"></i> E-commerce Website</strong>
+                    <p>Front-end website with product catalog and cart functionality</p>
+                </div>
+                <div class="edu-project">
+                    <strong><i class="fas fa-database"></i> Student Management System</strong>
+                    <p>Flask and SQLite based CRUD application</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section - Email opens Gmail, Phone opens WhatsApp -->
+    <div class="section" id="contact">
+        <div class="section-title">Contact</div>
+        <div class="contact-grid">
+            <div>
+                <!-- Email - opens Gmail/Email app -->
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:saadiakamil3400@gmail.com" class="contact-link">saadiakamil3400@gmail.com</a>
+                </div>
+                
+                <!-- Phone - opens WhatsApp -->
+                <div class="contact-detail">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <a href="https://wa.me/923153894002?text=Assalam-o-Alaikum%20Saadia,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" target="_blank" class="contact-link">+92-315-3894002 (WhatsApp)</a>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="contact-link" style="cursor: default;">Karachi, Pakistan</span>
+                </div>
+            </div>
+            <div>
+                <ul class="availability-list">
+                    <li><i class="fas fa-briefcase" style="color: #1a56db;"></i> Open for full-time opportunities</li>
+                    <li><i class="fas fa-laptop-house" style="color: #1a56db;"></i> Available for remote work</li>
+                    <li><i class="fas fa-calendar-check" style="color: #1a56db;"></i> Ready to join immediately</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 Saadia Kamil — AI Automation & Web Developer | BSIT Graduate December 2025</p>
+    </div>
 </div>
 
+<script>
+    // CV Download
+    document.getElementById('downloadCvBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        const resume = `========================================
+                    SAADIA KAMIL
+        AI AUTOMATION & WEB DEVELOPER
+========================================
+
+📧 saadiakamil3400@gmail.com
+📞 +92-315-3894002
+📍 Karachi, Pakistan
+
+🎓 EDUCATION
+BSIT, Benazir Bhutto Shaheed University Lyari
+Graduated: December 2025
+Final Year Project: Video Profanity Detection System
+
+💻 TECHNICAL SKILLS
+• AI & Backend: Python, Flask, NLP, SQLite
+• Web: HTML5, CSS3, JavaScript, Responsive Design
+• Automation: Scripting, APIs, Selenium
+
+🚀 KEY PROJECTS
+✓ North Gate Visa Services (Live Website)
+✓ Video Profanity Detection System (FYP)
+✓ AI Website Builder & Automation Tools
+
+✅ Available for immediate opportunities
+========================================`;
+        const blob = new Blob([resume], {type: 'text/plain'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'Saadia_Kamil_Resume.txt';
+        a.click();
+        URL.revokeObjectURL(a.href);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href !== '#') {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    });
+</script>
 </body>
 </html>
