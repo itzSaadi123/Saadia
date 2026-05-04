@@ -10,7 +10,7 @@
     <meta name="author" content="Saadia Kamil">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -22,16 +22,33 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f5f7fa;
+            background: linear-gradient(135deg, #e8f0fe 0%, #f5f0e8 50%, #fef5e7 100%);
+            min-height: 100vh;
             color: #1a1f2e;
             line-height: 1.5;
             scroll-behavior: smooth;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#b8c4d4 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         /* Navbar Desktop */
@@ -40,14 +57,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
             margin-bottom: 2rem;
         }
 
         .logo {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #1a56db;
+            background: linear-gradient(135deg, #1a56db, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             letter-spacing: -0.02em;
         }
 
@@ -78,6 +98,10 @@
             font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-download:hover {
@@ -100,7 +124,8 @@
             left: -280px;
             width: 280px;
             height: 100%;
-            background: white;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
             box-shadow: 2px 0 20px rgba(0,0,0,0.1);
             z-index: 1000;
             transition: left 0.3s ease;
@@ -124,7 +149,10 @@
         .sidebar .logo-side {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #1a56db;
+            background: linear-gradient(135deg, #1a56db, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             margin-bottom: 1rem;
             text-align: center;
         }
@@ -148,7 +176,6 @@
         }
 
         .sidebar .btn-download-side {
-            margin-top: 1rem;
             background: transparent;
             border: 1.5px solid #1a56db;
             color: #1a56db;
@@ -157,6 +184,13 @@
             font-weight: 600;
             cursor: pointer;
             text-align: center;
+            display: block;
+            text-decoration: none;
+        }
+
+        .sidebar .btn-download-side:hover {
+            background: #1a56db;
+            color: white;
         }
 
         .overlay {
@@ -165,7 +199,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(2px);
             z-index: 999;
             display: none;
         }
@@ -181,15 +216,17 @@
             gap: 3rem;
             margin-bottom: 4rem;
             align-items: center;
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 28px;
             padding: 2.5rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
         }
 
         .hero-badge {
             display: inline-block;
-            background: #e8f0fe;
+            background: rgba(232, 240, 254, 0.9);
             padding: 0.35rem 1.2rem;
             border-radius: 40px;
             font-size: 0.8rem;
@@ -214,7 +251,7 @@
         }
 
         .grad-info {
-            background: #f0f4fa;
+            background: rgba(240, 244, 250, 0.9);
             padding: 0.6rem 1rem;
             border-radius: 14px;
             display: inline-flex;
@@ -252,16 +289,21 @@
         }
 
         .hero-card {
-            background: #f8fafd;
+            background: rgba(248, 250, 253, 0.9);
+            backdrop-filter: blur(4px);
             border-radius: 20px;
             padding: 1.8rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(100, 116, 139, 0.15);
             text-align: center;
         }
 
         .hero-card h3 {
             font-size: 1.2rem;
             margin: 0.8rem 0;
+        }
+
+        .hero-card p {
+            color: #6c7a8a;
         }
 
         .live-link {
@@ -275,6 +317,11 @@
             margin-top: 0.8rem;
         }
 
+        .live-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
         .section-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -288,6 +335,7 @@
             margin-bottom: 4rem;
         }
 
+        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -295,16 +343,18 @@
         }
 
         .skill-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 1.8rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.2s;
         }
 
         .skill-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         .skill-icon {
@@ -331,7 +381,7 @@
         }
 
         .skill-tags span {
-            background: #f0f4fa;
+            background: rgba(240, 244, 250, 0.9);
             padding: 0.2rem 0.8rem;
             border-radius: 20px;
             font-size: 0.7rem;
@@ -339,6 +389,7 @@
             color: #1a56db;
         }
 
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -346,16 +397,18 @@
         }
 
         .project-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 1.5rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(255, 255, 255, 0.5);
             transition: all 0.2s;
         }
 
         .project-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         .project-icon {
@@ -385,7 +438,7 @@
         }
 
         .tech-stack span {
-            background: #f0f4fa;
+            background: rgba(240, 244, 250, 0.9);
             padding: 0.15rem 0.7rem;
             border-radius: 20px;
             font-size: 0.65rem;
@@ -403,6 +456,11 @@
             font-weight: 600;
         }
 
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Education Grid */
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -410,14 +468,15 @@
         }
 
         .edu-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 1.5rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .edu-badge {
-            background: #e8f0fe;
+            background: rgba(232, 240, 254, 0.9);
             display: inline-block;
             padding: 0.2rem 0.8rem;
             border-radius: 20px;
@@ -440,7 +499,7 @@
         }
 
         .edu-project {
-            background: #f8fafd;
+            background: rgba(248, 250, 253, 0.8);
             padding: 0.8rem;
             border-radius: 14px;
             margin-top: 0.8rem;
@@ -457,14 +516,16 @@
             color: #6c7a8a;
         }
 
+        /* Contact Grid */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
             border-radius: 24px;
             padding: 2rem;
-            border: 1px solid #eef2f6;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .contact-detail {
@@ -507,7 +568,7 @@
         .footer {
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid #eef2f6;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
             margin-top: 3rem;
             color: #8a99aa;
             font-size: 0.85rem;
@@ -586,7 +647,9 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
-        <button id="downloadCvBtnSide" class="btn-download-side"><i class="fas fa-download"></i> Resume</button>
+        <a href="SAADIA KAMIL CV.docx" download="SAADIA KAMIL CV.docx" class="btn-download-side">
+            <i class="fas fa-download"></i> Resume
+        </a>
     </div>
 
     <!-- Desktop Navbar -->
@@ -599,7 +662,9 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
-        <button id="downloadCvBtn" class="btn-download"><i class="fas fa-download"></i> Resume</button>
+        <a href="SAADIA KAMIL CV.pdf" download="SAADIA KAMIL CV.docx" class="btn-download">
+            <i class="fas fa-download"></i> Resume
+        </a>
         <div class="menu-icon" id="menuIcon">
             <i class="fas fa-bars"></i>
         </div>
@@ -631,11 +696,11 @@
         <div class="hero-card">
             <i class="fas fa-globe" style="font-size: 2rem; color: #1a56db;"></i>
             <h3>Live Project</h3>
-            <p style="color: #6c7a8a;">North Gate Visa Services — Professional visa consultation website</p>
+            <p>North Gate Visa Services — Professional visa consultation website</p>
             <a href="https://northgatevisaservices.com/" target="_blank" class="live-link">
                 <i class="fas fa-external-link-alt"></i> northgatevisaservices.com
             </a>
-            <hr style="margin: 1rem 0; border-color: #e2e8f0;">
+            <hr style="margin: 1rem 0; border-color: rgba(100,116,139,0.2);">
             <div style="font-size: 0.8rem; color: #6c7a8a;">
                 <i class="fas fa-check-circle" style="color: #22c55e;"></i> Fully Responsive & SEO Optimized
             </div>
@@ -724,7 +789,7 @@
         </div>
     </div>
 
-    <!-- Contact Section - WhatsApp text removed -->
+    <!-- Contact Section -->
     <div class="section" id="contact">
         <div class="section-title">Contact</div>
         <div class="contact-grid">
@@ -781,52 +846,14 @@
     closeSidebar.addEventListener('click', closeSidebarFunc);
     overlay.addEventListener('click', closeSidebarFunc);
 
+    // Close sidebar when clicking on a link
     document.querySelectorAll('.sidebar-links a').forEach(link => {
         link.addEventListener('click', () => {
             closeSidebarFunc();
         });
     });
 
-    // CV Download
-    function downloadCV() {
-        const resume = `========================================
-                    SAADIA KAMIL
-        AI AUTOMATION & WEB DEVELOPER
-========================================
-
-📧 saadiakamil3400@gmail.com
-📞 +92-315-3894002
-📍 Karachi, Pakistan
-
-🎓 EDUCATION
-BSIT, Benazir Bhutto Shaheed University Lyari
-Graduated: December 2025
-Final Year Project: Video Profanity Detection System
-
-💻 TECHNICAL SKILLS
-• AI & Backend: Python, Flask, NLP, SQLite
-• Web: HTML5, CSS3, JavaScript, Responsive Design
-• Automation: Scripting, APIs, Selenium
-
-🚀 KEY PROJECTS
-✓ North Gate Visa Services (Live Website)
-✓ Video Profanity Detection System (FYP)
-✓ AI Website Builder & Automation Tools
-
-✅ Available for immediate opportunities
-========================================`;
-        const blob = new Blob([resume], {type: 'text/plain'});
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'Saadia_Kamil_Resume.txt';
-        a.click();
-        URL.revokeObjectURL(a.href);
-    }
-
-    document.getElementById('downloadCvBtn').addEventListener('click', downloadCV);
-    document.getElementById('downloadCvBtnSide').addEventListener('click', downloadCV);
-
-    // Smooth scroll
+    // Smooth scroll for navigation
     document.querySelectorAll('.sidebar-links a, .nav-links a').forEach(link => {
         const href = link.getAttribute('href');
         if (href && href !== '#') {
@@ -834,7 +861,9 @@ Final Year Project: Video Profanity Detection System
                 e.preventDefault();
                 closeSidebarFunc();
                 const target = document.querySelector(href);
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         }
     });
