@@ -34,7 +34,7 @@
             padding: 0 1.5rem;
         }
 
-        /* ========== NAVBAR - DESKTOP ========== */
+        /* Navbar Desktop */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -85,7 +85,7 @@
             color: white;
         }
 
-        /* ========== MOBILE SIDEBAR NAVIGATION ========== */
+        /* Mobile Sidebar */
         .menu-icon {
             display: none;
             font-size: 1.8rem;
@@ -141,7 +141,6 @@
             font-weight: 500;
             font-size: 1rem;
             padding: 0.5rem 0;
-            transition: color 0.2s;
         }
 
         .sidebar-links a:hover {
@@ -514,13 +513,12 @@
             font-size: 0.85rem;
         }
 
-        /* ========== RESPONSIVE ========== */
+        /* Responsive */
         @media (max-width: 900px) {
             .container {
                 padding: 0 1rem;
             }
             
-            /* Hide desktop navbar items */
             .navbar .nav-links {
                 display: none;
             }
@@ -529,12 +527,10 @@
                 display: none;
             }
             
-            /* Show menu icon */
             .menu-icon {
                 display: block;
             }
             
-            /* Hide logo on mobile */
             .navbar .logo {
                 display: none;
             }
@@ -728,7 +724,7 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - WhatsApp text removed -->
     <div class="section" id="contact">
         <div class="section-title">Contact</div>
         <div class="contact-grid">
@@ -739,7 +735,7 @@
                 </div>
                 <div class="contact-detail">
                     <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-                    <a href="https://wa.me/923153894002?text=Assalam-o-Alaikum%20Saadia,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" target="_blank" class="contact-link">+92-315-3894002 (WhatsApp)</a>
+                    <a href="https://wa.me/923153894002?text=Assalam-o-Alaikum%20Saadia,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you!" target="_blank" class="contact-link">+92-315-3894002</a>
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-map-marker-alt"></i>
@@ -785,7 +781,6 @@
     closeSidebar.addEventListener('click', closeSidebarFunc);
     overlay.addEventListener('click', closeSidebarFunc);
 
-    // Close sidebar when clicking on a link
     document.querySelectorAll('.sidebar-links a').forEach(link => {
         link.addEventListener('click', () => {
             closeSidebarFunc();
@@ -831,7 +826,7 @@ Final Year Project: Video Profanity Detection System
     document.getElementById('downloadCvBtn').addEventListener('click', downloadCV);
     document.getElementById('downloadCvBtnSide').addEventListener('click', downloadCV);
 
-    // Smooth scroll for sidebar links
+    // Smooth scroll
     document.querySelectorAll('.sidebar-links a, .nav-links a').forEach(link => {
         const href = link.getAttribute('href');
         if (href && href !== '#') {
