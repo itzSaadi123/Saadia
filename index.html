@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Saadia Kamil | AI Automation & Web Developer</title>
-    <meta name="description" content="Saadia Kamil - AI Automation Specialist & Web Developer. BSIT Graduate.">
+    <title>Saadia Kamil | Web Developer</title>
+    <meta name="description" content="Saadia Kamil - Web Developer. BSIT Graduate.">
     <meta name="author" content="Saadia Kamil">
 
     <!-- Fonts & Icons -->
@@ -300,6 +300,26 @@
             gap: 2rem;
         }
 
+        .projects-showcase {
+            background: linear-gradient(160deg, color-mix(in srgb, var(--primary) 6%, transparent), transparent 60%);
+            border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--border-color));
+            border-radius: 26px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+        }
+        .showcase-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #22c55e;
+            background: rgba(34, 197, 94, 0.12);
+            padding: 0.5rem 1.1rem;
+            border-radius: 40px;
+            margin-bottom: 2rem;
+        }
+
         .skill-card, .project-card, .edu-card, .contact-grid {
             background: var(--card-bg);
             backdrop-filter: blur(16px);
@@ -518,7 +538,7 @@
             .hero-tagline { font-size: 1.1rem; min-height: 2.5rem; }
             .grad-info { justify-content: center; font-size: 0.8rem; padding: 0.5rem; }
             .stats-grid { justify-content: center; gap: 1.8rem; }
-            .hero-card { padding: 2rem 1.2rem; }
+            .hero-card { display: none; }
 
             .section { margin-bottom: 4rem; }
             .section-title { font-size: 1.6rem; margin-bottom: 1.8rem; }
@@ -557,10 +577,7 @@
             .stat-number { font-size: 1.3rem; }
             .stat-label { font-size: 0.65rem; }
 
-            .hero-card { padding: 1.6rem 1.1rem; border-radius: 14px; }
-            .hero-card h3 { font-size: 1.05rem; }
-            .hero-card p { font-size: 0.85rem; }
-            .live-link { font-size: 0.85rem; word-break: break-word; }
+            .hero-card { display: none; }
 
             .section { margin-bottom: 2.8rem; }
             .section-title { font-size: 1.3rem; margin-bottom: 1.3rem; padding-left: 0.75rem; border-left-width: 4px; }
@@ -643,7 +660,7 @@
     <div class="hero">
         <div>
             <div class="hero-badge">
-                <i class="fas fa-robot"></i> AI Automation & Web Development
+                <i class="fas fa-code"></i> Web Developer
             </div>
             <h1>Saadia Kamil</h1>
             <div class="hero-tagline"><span id="typed-text"></span><span class="cursor"></span></div>
@@ -654,12 +671,12 @@
             </div>
             
             <p class="hero-desc">
-                I am a BSIT graduate with a strong passion for Artificial Intelligence, Web Development, and Automation. My expertise includes building full-stack applications with Python and Flask, developing advanced NLP pipelines, and writing automation scripts that solve real-world problems.
+                I am a BSIT graduate and web developer who builds clean, responsive, and functional websites from scratch. My work spans full front-end builds with HTML, CSS, and JavaScript, along with Python/Flask backends when a project needs one — always focused on solid structure, performance, and a smooth user experience.
             </p>
             
             <div class="stats-grid">
-                <div><div class="stat-number">7+</div><div class="stat-label">Projects</div></div>
-                <div><div class="stat-number">5+</div><div class="stat-label">Live Sites</div></div>
+                <div><div class="stat-number">3+</div><div class="stat-label">Live Projects</div></div>
+                <div><div class="stat-number">100%</div><div class="stat-label">Responsive</div></div>
                 <div><div class="stat-number">Fresh</div><div class="stat-label">Graduate</div></div>
             </div>
         </div>
@@ -681,68 +698,64 @@
     <div class="section reveal" id="skills">
         <div class="section-title">Technical Expertise</div>
         <div class="skills-grid">
-            <div class="skill-card" style="--accent:#a855f7; --accent-glow:rgba(168,85,247,0.25);">
-                <div class="skill-icon"><i class="fab fa-python"></i></div>
-                <h3>AI & Backend</h3>
-                <p>Python engines, Flask backends, NLP analysis, and automated database interactions using SQLite.</p>
-                <div class="skill-tags"><span>Python</span><span>Flask</span><span>NLP</span><span>SQLite</span></div>
-            </div>
             <div class="skill-card" style="--accent:#0ea5e9; --accent-glow:rgba(14,165,233,0.25);">
                 <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                <h3>Frontend Engineering</h3>
+                <h3>Frontend Development</h3>
                 <p>Designing modern, scalable, dynamic interfaces prioritizing semantic layout and fluid responsiveness.</p>
                 <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UI/UX</span></div>
             </div>
+            <div class="skill-card" style="--accent:#a855f7; --accent-glow:rgba(168,85,247,0.25);">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <h3>Backend Development</h3>
+                <p>Building server-side logic and lightweight applications with Python, Flask, and SQLite-backed data storage.</p>
+                <div class="skill-tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>REST APIs</span></div>
+            </div>
             <div class="skill-card" style="--accent:#f59e0b; --accent-glow:rgba(245,158,11,0.25);">
                 <div class="skill-icon"><i class="fas fa-bolt"></i></div>
-                <h3>Intelligent Automation</h3>
-                <p>Custom extraction layers via web scraping, systematic API integrations, and robust automated cron scripts.</p>
-                <div class="skill-tags"><span>Automation</span><span>APIs</span><span>Selenium</span><span>Scraping</span></div>
+                <h3>Performance & Tools</h3>
+                <p>Writing clean, maintainable code with an eye on load speed, SEO fundamentals, and cross-device consistency.</p>
+                <div class="skill-tags"><span>Git</span><span>SEO Basics</span><span>Responsive Design</span><span>APIs</span></div>
             </div>
         </div>
     </div>
 
     <!-- Complete Production Showcase Showroom -->
     <div class="section reveal" id="projects">
-        <div class="section-title">Featured Creations</div>
-        <div class="projects-grid">
-            <div class="project-card reveal" style="--accent:#22c55e; --accent-glow:rgba(34,197,94,0.3); --delay:0s;">
-                <div class="project-status"><span class="dot"></span>Live</div>
-                <div class="project-icon"><i class="fas fa-seedling"></i></div>
-                <div class="project-title">Verdant — Bring the Forest Home</div>
-                <div class="project-desc">A full-fledged plant e-commerce experience with product filtering, cart and wishlist flows, and a Cash-on-Delivery checkout system.</div>
-                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>E-Commerce</span></div>
-                <a href="https://itzsaadi123.github.io/Verdant-Living/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
-            </div>
-            <div class="project-card reveal" style="--accent:#f59e0b; --accent-glow:rgba(245,158,11,0.3); --delay:0.08s;">
-                <div class="project-status"><span class="dot"></span>Live</div>
-                <div class="project-icon"><i class="fas fa-passport"></i></div>
-                <div class="project-title">North Gate Visa Services</div>
-                <div class="project-desc">A premium service platform featuring automated multi-step contact routing architectures and dynamic responsive displays.</div>
-                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-                <a href="https://northgatevisaservices.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
-            </div>
-            <div class="project-card reveal" style="--accent:#0ea5e9; --accent-glow:rgba(14,165,233,0.3); --delay:0.16s;">
-                <div class="project-status"><span class="dot"></span>Live</div>
-                <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
-                <div class="project-title">Skye — Weather App</div>
-                <div class="project-desc">A personal weather companion with live city search, location detection, and an integrated Namaz (prayer) timings module with next-prayer countdown.</div>
-                <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Weather API</span></div>
-                <a href="https://itzsaadi123.github.io/skye-weather/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
-            </div>
-            <div class="project-card reveal" style="--accent:#ef4444; --accent-glow:rgba(239,68,68,0.3); --delay:0.24s;">
-                <div class="project-status"><span class="dot"></span>Prototype</div>
-                <div class="project-icon"><i class="fas fa-video"></i></div>
-                <div class="project-title">Video Profanity Filter</div>
-                <div class="project-desc">Natural Language Processing asset analyzing subtitles and audio markers to construct accurate automated rating criteria.</div>
-                <div class="tech-stack"><span>Python</span><span>Flask</span><span>NLP</span></div>
-            </div>
-            <div class="project-card reveal" style="--accent:#a855f7; --accent-glow:rgba(168,85,247,0.3); --delay:0.32s;">
-                <div class="project-status"><span class="dot"></span>Prototype</div>
-                <div class="project-icon"><i class="fas fa-magic"></i></div>
-                <div class="project-title">AI Template Generator</div>
-                <div class="project-desc">An automation workflow tool interpreting textual system requirements into structural markup structures dynamically.</div>
-                <div class="tech-stack"><span>Python</span><span>Automation</span><span>APIs</span></div>
+        <div class="section-title">Projects I've Built</div>
+        <div class="projects-showcase">
+            <div class="showcase-label"><i class="fas fa-check-circle"></i> Built end-to-end by me</div>
+            <div class="projects-grid">
+                <div class="project-card reveal" style="--accent:#22c55e; --accent-glow:rgba(34,197,94,0.3); --delay:0s;">
+                    <div class="project-status"><span class="dot"></span>Live</div>
+                    <div class="project-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="project-title">Verdant — Bring the Forest Home</div>
+                    <div class="project-desc">A full-fledged plant e-commerce experience with product filtering, cart and wishlist flows, and a Cash-on-Delivery checkout system.</div>
+                    <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>E-Commerce</span></div>
+                    <a href="https://itzsaadi123.github.io/Verdant-Living/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
+                </div>
+                <div class="project-card reveal" style="--accent:#f59e0b; --accent-glow:rgba(245,158,11,0.3); --delay:0.08s;">
+                    <div class="project-status"><span class="dot"></span>Live</div>
+                    <div class="project-icon"><i class="fas fa-passport"></i></div>
+                    <div class="project-title">North Gate Visa Services</div>
+                    <div class="project-desc">A premium service platform featuring automated multi-step contact routing architectures and dynamic responsive displays.</div>
+                    <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                    <a href="https://northgatevisaservices.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
+                </div>
+                <div class="project-card reveal" style="--accent:#0ea5e9; --accent-glow:rgba(14,165,233,0.3); --delay:0.16s;">
+                    <div class="project-status"><span class="dot"></span>Live</div>
+                    <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <div class="project-title">Skye — Weather App</div>
+                    <div class="project-desc">A personal weather companion with live city search, location detection, and an integrated Namaz (prayer) timings module with next-prayer countdown.</div>
+                    <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Weather API</span></div>
+                    <a href="https://itzsaadi123.github.io/skye-weather/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Production Link</a>
+                </div>
+                <div class="project-card reveal" style="--accent:#ef4444; --accent-glow:rgba(239,68,68,0.3); --delay:0.24s;">
+                    <div class="project-status"><span class="dot"></span>FYP</div>
+                    <div class="project-icon"><i class="fas fa-video"></i></div>
+                    <div class="project-title">Video Content Rating & Profanity Detection System</div>
+                    <div class="project-desc">My BSIT capstone project — a Flask-based system that analyzes subtitles and audio markers to flag profanity and generate automated content ratings.</div>
+                    <div class="tech-stack"><span>Python</span><span>Flask</span><span>NLP</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -808,7 +821,7 @@
 
     <!-- Footer Blueprint Credits -->
     <div class="footer">
-        <p>© 2026 Saadia Kamil — AI Automation Specialist & Web Developer</p>
+        <p>© 2026 Saadia Kamil — Web Developer</p>
     </div>
 </div>
 
@@ -865,9 +878,9 @@
 
     // Dynamic Auto-Typewriter Module Strings
     const words = [
-        "Building Intelligent Systems", 
-        "Developing Modern Web Experiences", 
-        "Architecting Custom Automation Workflow Engines"
+        "Building Modern Web Experiences", 
+        "Crafting Clean, Responsive Interfaces", 
+        "Turning Ideas Into Live Websites"
     ];
     let wordIdx = 0, charIdx = 0, isDeleting = false;
     const delayTyping = 100, delayErasing = 50, delayTurn = 1500;
